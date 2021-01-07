@@ -5,7 +5,7 @@
       <v-card-subtitle>Pico y Placa PLUS Confinement</v-card-subtitle>
       <v-card-text>
         <v-row>
-          <v-col cols="3">
+          <v-col cols="12" sm="12" md="4" lg="3" xl="2">
             <v-switch
               v-model="isPlacaOdd"
               :label="'Car Plate : ' + getLabelOdd(isPlacaOdd)"
@@ -17,7 +17,7 @@
               color="red"
             ></v-switch>
           </v-col>
-          <v-col cols="9">
+          <v-col cols="12" sm="12" md="8" lg="9" xl="10">
             <v-row justify="space-between">
               <v-col>
                 <v-btn icon class="ma-2" @click="$refs.calendar.prev()">
