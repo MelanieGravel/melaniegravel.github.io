@@ -27,15 +27,13 @@
 // ODD ID - EVEN DATES
 // 7 days
 
-import { Component, Vue } from 'vue-property-decorator'
+import { Component, Vue } from 'vue-property-decorator';
 
 @Component({})
 export default class OptimizationLandingPage extends Vue {
-  private events: any[] = []
+  private events: any[] = [];
 
-  private getEvents () {
-
-  }
+  private getEvents() {}
 }
 </script>
 
