@@ -4,14 +4,13 @@ on:
   push:
     branches:
       - main
-      - master
   pull_request:
     branches:
       - main
-      - master
 
 jobs:
-  ci:
+  gh-pages-deploy:
+    name: Deploying to Github Pages
     runs-on: ${{ matrix.os }}
 
     strategy:
@@ -52,4 +51,5 @@ jobs:
 
       - name: Deploy 👽
         run: yarn deploy
+
 
