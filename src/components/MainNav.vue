@@ -1,5 +1,6 @@
 <template>
   <v-app-bar
+    class="mg__main-nav"
     absolute
     color="#6A76AB"
     dark
@@ -18,27 +19,29 @@
 
     <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-    <v-app-bar-title>Title</v-app-bar-title>
+    <v-app-bar-title class="pl-0">
+      {{$t('mainInfo.name')}} - <span class="text-body-1">{{$t('mainInfo.title')}}</span>
+    </v-app-bar-title>
 
     <v-spacer></v-spacer>
 
     <v-btn icon>
-      <v-icon>fa-magnify</v-icon>
+      <v-icon>fa-twitter</v-icon>
     </v-btn>
 
     <v-btn icon>
-      <v-icon>fa-heart</v-icon>
+      <v-icon>fa-linkedin</v-icon>
     </v-btn>
 
     <v-btn icon>
-      <v-icon>fa-dots-vertical</v-icon>
+      <v-icon>fa-github</v-icon>
     </v-btn>
 
     <template v-slot:extension>
       <v-tabs align-with-title>
-        <v-tab>Tab 1</v-tab>
-        <v-tab>Tab 2</v-tab>
-        <v-tab>Tab 3</v-tab>
+        <v-tab>{{$t('section.projects')}}</v-tab>
+        <v-tab>{{$t('section.skills')}}</v-tab>
+        <v-tab>{{$t('section.about')}}</v-tab>
       </v-tabs>
     </template>
   </v-app-bar>
@@ -64,4 +67,5 @@ export default class MainNav extends Vue {
 
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+</style>
