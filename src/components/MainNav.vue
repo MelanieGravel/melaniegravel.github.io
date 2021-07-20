@@ -25,15 +25,11 @@
 
     <v-spacer></v-spacer>
 
-    <v-btn icon>
-      <v-icon>fa-twitter</v-icon>
-    </v-btn>
-
-    <v-btn icon>
+    <v-btn icon to="https://www.linkedin.com/in/melanie-gravel/">
       <v-icon>fa-linkedin</v-icon>
     </v-btn>
 
-    <v-btn icon>
+    <v-btn icon to="https://github.com/MelanieGravel">
       <v-icon>fa-github</v-icon>
     </v-btn>
 

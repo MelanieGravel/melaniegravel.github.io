@@ -7,7 +7,7 @@ const EN_LOCALES = {
   section: {
     projects: 'Projects',
     skills: 'Skills',
-    about: 'About',
+    about: 'About me',
   },
 };
 
