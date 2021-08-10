@@ -1,6 +1,22 @@
 <template>
   <v-container>
-    <HPCharacterSheet :character="character"></HPCharacterSheet>
+    <v-app-bar
+      flat
+      color="rgba(0, 0, 0, 0)"
+    >
+      <v-toolbar-title class="text-subtitle-1 white--text pl-0">
+        Tests
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-switch
+        v-model="jsonMode"
+        :label="`JSON MODE: ${jsonMode.toString()}`"
+      ></v-switch>
+    </v-app-bar>
+    <pre v-if="jsonMode">
+      <pre>{{character}}</pre>
+    </pre>
+    <h-p-character-sheet v-else :character="character"></h-p-character-sheet>
   </v-container>
 </template>
 
@@ -18,6 +34,8 @@ import HPCharacterSheet from '../components/hpttrpg/HPCharacterSheet.vue';
   },
 })
 export default class HPLandingPage extends Vue {
+  private jsonMode: boolean = false;
+
   private character!: iHPCharacter;
 
   protected created(): void {

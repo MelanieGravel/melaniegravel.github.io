@@ -11,15 +11,8 @@
         <v-toolbar-title class="text-subtitle-1 white--text pl-0">
           Character
         </v-toolbar-title>
-
         <v-spacer></v-spacer>
-
-        <v-btn
-          color="white"
-          icon
-        >
-          <v-icon>fas fa-ellipsis-v</v-icon>
-        </v-btn>
+        <h-p-character-actions></h-p-character-actions>
       </v-app-bar>
       <v-card-title class="white--text">
         <v-avatar v-if="character.imagesURL.length > 0" size="100">
@@ -78,8 +71,13 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import iHPCharacter from '../../store/harry-potter-ttrpg/models/character';
+import HPCharacterActions from './HPCharacterActions.vue';
 
-@Component({})
+@Component({
+  components: {
+    HPCharacterActions,
+  },
+})
 export default class HPCharacterSheet extends Vue {
   // Properties
   @Prop({
