@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <main-nav></main-nav>
-    <v-main>
+    <v-main class="temp__top">
       <router-view />
     </v-main>
   </v-app>
@@ -21,3 +21,9 @@ export default class App extends Vue {
 }
 
 </script>
+
+<style lang="scss">
+.temp__top{
+  margin-top: 224px;
+}
+</style>
