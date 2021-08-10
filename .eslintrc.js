@@ -25,5 +25,13 @@ module.exports = {
         jest: true,
       },
     },
+    {
+      files: [
+        '**/*.vue',
+      ],
+      rules: {
+        'object-curly-newline': 'off',
+      },
+    },
   ],
 };
